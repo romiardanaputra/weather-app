@@ -17,7 +17,4 @@ A simple weather app that provides real-time weather information based on user i
 Feel free to contribute by forking the repository and creating pull requests. Please follow the branch structure and keep commits focused on specific features or bug fixes.
 
 ## Credits
-This project is maintained by [Your Name].
-
-## License
-This project is licensed under the [MIT License](LICENSE).
+This project is maintained by Kadek Romi Ardana Putra.
