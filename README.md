@@ -9,7 +9,7 @@ A simple weather app that provides real-time weather information based on user i
 - Responsive design for a seamless user experience
 
 ## Usage
-1. Clone the repository: `git clone https://github.com/yourusername/weather-app.git`
+1. Clone the repository: `git clone https://github.com/romiardanaputra/weather-app.git`
 2. Install dependencies if any.
 3. Open `index.html` in your browser.
 
