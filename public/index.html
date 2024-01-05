@@ -6,13 +6,104 @@
       <title>Weather Page</title>
       <link rel="stylesheet" href="assets/index.css" />
    </head>
-   <body>
-      <div class="bg-background min-h-screen">
-         <div class="container ">
-
+   <body class="bg-background">
+      <!-- navbar content start -->
+      <div
+         class="navbar w-full h-[70px] bg-primary2 flex items-center justify-between text-secondary px-5 mb-5"
+      >
+         <div class="logo flex">
+            <span><i data-feather="sun"></i></span>
+            <span>MyWeather</span>
+         </div>
+         <div class="menu-bar">
+            <span><i data-feather="menu"></i></span>
          </div>
       </div>
+      <!-- navbar content end -->
+
+      <div
+         class="container flex justify-center items-center flex-col gap-y-5 mt-10"
+      >
+         <h1 class="text-secondary text-[20px] font-medium self-start ml-6">
+            Weather Overview
+         </h1>
+
+         <!-- Temperature card section start -->
+         <div
+            class="temprature w-[90%] flex justify-center text-secondary flex-col gap-y-2 bg-primary2 p-10 rounded-lg"
+         >
+            <div class="self-end">
+               <i data-feather="sun" class="w-[80px] h-[80px]"></i>
+            </div>
+            <div class="temp text-[40px] font-medium">28°C</div>
+            <div class="flex gap-x-2">
+               <i data-feather="cloud"></i>Clear sky
+            </div>
+            <hr class="my-5" />
+            <div class="flex gap-x-2">
+               <i data-feather="map-pin"></i>Indonesia
+            </div>
+         </div>
+
+         <!-- Temperature card section end -->
+
+         <!-- wind speed card start -->
+         <div
+            class="wind-speed w-[90%] flex justify-between items-center text-secondary bg-primary2 p-10 rounded-lg gap-x-5"
+         >
+            <div class="px-2">
+               <i data-feather="wind" class="w-[50px] h-[50px]"></i>
+            </div>
+            <div class="wind-speed-desc w-full">
+               <p>Wind Speed</p>
+               <p class="text-[25px]">29 km/h</p>
+            </div>
+         </div>
+         <!-- wind speed card end -->
+
+         <!-- Humidity card start -->
+         <div
+            class="wind-speed w-[90%] flex justify-between items-center text-secondary bg-primary2 p-10 rounded-lg gap-x-5"
+         >
+            <div class="px-2">
+               <i data-feather="umbrella" class="w-[50px] h-[50px]"></i>
+            </div>
+            <div class="wind-speed-desc w-full">
+               <p>Humidity</p>
+               <p class="text-[25px]">29%</p>
+            </div>
+         </div>
+         <!-- humidity card end -->
+
+         <!-- pressure start -->
+         <div
+            class="wind-speed w-[90%] flex justify-between items-center text-secondary bg-primary2 p-10 rounded-lg gap-x-5"
+         >
+            <div class="px-2">
+               <i data-feather="droplet" class="w-[50px] h-[50px]"></i>
+            </div>
+            <div class="wind-speed-desc w-full">
+               <p>Pressure</p>
+               <p class="text-[25px]">10092</p>
+            </div>
+         </div>
+         <!-- pressure end -->
+
+          <!-- visibility start -->
+          <div
+          class="wind-speed w-[90%] flex justify-between items-center text-secondary bg-primary2 p-10 rounded-lg gap-x-5"
+       >
+          <div class="px-2">
+             <i data-feather="eye" class="w-[50px] h-[50px]"></i>
+          </div>
+          <div class="wind-speed-desc w-full">
+             <p>Visibility</p>
+             <p class="text-[25px]">10092</p>
+          </div>
+       </div>
+       <!-- visibility end -->
+      </div>
       <script src="https://unpkg.com/feather-icons"></script>
-      <script src="index.js"></script>
+      <script src="../src/assets/js/index.js"></script>
    </body>
 </html>

@@ -1,4 +1,5 @@
 feather.replace();
+console.log(document.querySelector('.temp'))
 
 // api key
 const apiKey = "7e1ac7724b9183803802615e5e8952ab";
