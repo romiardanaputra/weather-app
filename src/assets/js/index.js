@@ -48,7 +48,7 @@ const checkWeather = async () => {
   groundLevel.innerHTML = data.main.grnd_level + ' hPa'
   seaLevel.innerHTML = data.main.sea_level + ' hPa'
   base.innerHTML = data.base
-  timezone.innerHTML = data.timezone
+  timezone.innerHTML = timezoneConvert(data.timezone);
 }
 
 checkWeather()
@@ -59,4 +59,15 @@ const formatTime = (date) => {
   const hours = date.getUTCHours().toString().padStart(2, '0');
   const minutes = date.getUTCMinutes().toString().padStart(2, '0');
   return `${hours}:${minutes} UTC`
+}
+
+// function convert timezone
+const timezoneConvert = (timezone) => {
+  const timezoneOffsetInMilliseconds = timezone * 1000;
+  const dateWithOffset = new Date(timezoneOffsetInMilliseconds);
+  const hours = dateWithOffset.getUTCHours();
+  const minutes = dateWithOffset.getUTCMinutes();
+  const seconds = dateWithOffset.getUTCSeconds();
+  const offsetString = `${hours}:${minutes}:${seconds}`;
+  return offsetString;
 }
