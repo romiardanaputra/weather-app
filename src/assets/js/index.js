@@ -18,10 +18,10 @@ const checkWeather = async () => {
   document.querySelector('.wind-speed').innerHTML = data.wind.speed + ' km/h'
   document.querySelector('.sunrise').innerHTML = data.sys.sunrise
   document.querySelector('.sunset').innerHTML = data.sys.sunset
-  document.querySelector('.pressure').innerHTML = data.main.pressure
-  document.querySelector('.visibility').innerHTML = data.visibility
-  document.querySelector('.ground-level').innerHTML = data.main.grnd_level
-  document.querySelector('.sea-level').innerHTML = data.main.sea_level
+  document.querySelector('.pressure').innerHTML = data.main.pressure + ' hPa'
+  document.querySelector('.visibility').innerHTML = data.visibility + ' meters'
+  document.querySelector('.ground-level').innerHTML = data.main.grnd_level + ' hPa'
+  document.querySelector('.sea-level').innerHTML = data.main.sea_level + ' hPa'
   document.querySelector('.base').innerHTML = data.base
   document.querySelector(".timezone").innerHTML = data.timezone
 }
