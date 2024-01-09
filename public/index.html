@@ -1,286 +1,286 @@
 <!doctype html>
 <html lang="en">
-   <head>
-      <meta charset="UTF-8" />
-      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      <title>Weather Page</title>
-      <link rel="stylesheet" href="assets/index.css" />
-      <link
-         href="https://cdn.jsdelivr.net/npm/remixicon@4.0.0/fonts/remixicon.css"
-         rel="stylesheet"
-      />
-   </head>
-   <body class="bg-background">
-      <!-- navbar content start -->
-      <nav
-         class="relative py-4 mt-10 h-[60px] flex justify-between items-center bg-background container mx-auto gap-x-10"
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather Page</title>
+    <link rel="stylesheet" href="assets/index.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@4.0.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body class="bg-background">
+    <!-- navbar content start -->
+    <nav
+      class="container relative mx-auto mt-10 flex h-[60px] items-center justify-between gap-x-10 bg-background py-4"
+    >
+      <a
+        class="mx-start block w-[200px] rounded-xl bg-primary2 px-8 py-3 text-xs font-semibold leading-loose text-secondary md:flex md:w-full md:items-center md:justify-center md:text-[18px]"
+        href="#"
+        ><i class="ri-sun-fill pr-5 md:text-2xl"></i>MeWeather</a
       >
-         <a
-            class="block mx-start w-[200px] px-8 py-3 leading-loose text-xs text-secondary font-semibold bg-primary2 rounded-xl md:text-[18px] md:flex md:items-center md:w-full md:justify-center"
-            href="#"
-            ><i class="ri-sun-fill pr-5 md:text-2xl"></i>MeWeather</a
-         >
-         <div class="input w-full hidden md:block">
-            <input
-               type="search"
-               placeholder="Search Country"
-               class="w-[800px] h-[60px] rounded-lg px-6 bg-primary2"
-            />
-         </div>
-         <div class="dark-mode hidden md:block">
-            <button class="w-[60px] h-[60px] bg-secondary rounded-lg">
-               <i class="ri-moon-line text-3xl"></i>
-            </button>
-         </div>
-         <a
-            class="px-8 py-3 h-[60px] w-full leading-loose hidden text-xs text-center text-secondary font-normal bg-primary rounded-xl md:text-[16px] md:flex md:items-center md:justify-center"
-            href="#"
-            ><i class="ri-github-fill text-2xl mr-2"></i>Support Me</a
-         >
-         <div class="lg:hidden">
-            <button class="navbar-burger flex items-center text-secondary p-3">
-               <svg
-                  class="block h-6 w-6 fill-current"
-                  viewBox="0 0 20 20"
-                  xmlns="http://www.w3.org/2000/svg"
-               >
-                  <title>Mobile menu</title>
-                  <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"></path>
-               </svg>
-            </button>
-         </div>
-      </nav>
-      <!-- navbar in mobile -->
-      <div class="navbar-menu relative z-50 hidden">
-         <div
-            class="navbar-backdrop fixed inset-0 bg-gray-800 opacity-25"
-         ></div>
-         <nav
-            class="fixed top-0 left-0 bottom-0 flex flex-col w-5/6 max-w-sm py-6 px-6 bg-background overflow-y-auto"
-         >
-            <div class="flex items-center mb-8">
-               <a
-                  class="mr-auto text-2xl font-semibold leading-none text-secondary"
-                  href="#"
-               >
-                  <i class="ri-sun-fill"></i> MeWeather
-               </a>
-               <button class="navbar-close">
-                  <svg
-                     class="h-6 w-6 text-gray-400 cursor-pointer hover:text-gray-500"
-                     xmlns="http://www.w3.org/2000/svg"
-                     fill="none"
-                     viewBox="0 0 24 24"
-                     stroke="currentColor"
-                  >
-                     <path
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        stroke-width="2"
-                        d="M6 18L18 6M6 6l12 12"
-                     ></path>
-                  </svg>
-               </button>
-            </div>
-            <input
-               type="search"
-               placeholder="search county.."
-               class="bg-primary2 h-[60px] rounded-xl px-6 text-secondary"
-            />
-
-            <div class="mt-auto">
-               <div class="pt-6">
-                  <a
-                     class="block px-4 py-3 mb-2 leading-loose text-xs text-center text-white font-semibold bg-blue-600 hover:bg-blue-700 rounded-xl"
-                     href="#"
-                     ><i class="ri-github-fill text-2xl mr-2"></i>Support Me</a
-                  >
-               </div>
-               <p class="my-4 text-xs text-center text-gray-400">
-                  <span>Copyright © 2021</span>
-               </p>
-            </div>
-         </nav>
+      <div class="input hidden w-full md:block">
+        <input
+          type="search"
+          placeholder="Search Country"
+          class="h-[60px] w-[800px] rounded-lg bg-primary2 px-6"
+        />
       </div>
-      <!-- navbar content end -->
-
-      <main
-         class="container w-full mx-auto flex justify-center items-center flex-col gap-y-5 mt-10 sm:w-full"
+      <div class="dark-mode hidden md:block">
+        <button class="h-[60px] w-[60px] rounded-lg bg-secondary">
+          <i class="ri-moon-line text-3xl"></i>
+        </button>
+      </div>
+      <a
+        class="hidden h-[60px] w-full rounded-xl bg-primary px-8 py-3 text-center text-xs font-normal leading-loose text-secondary md:flex md:items-center md:justify-center md:text-[16px]"
+        href="#"
+        ><i class="ri-github-fill mr-2 text-2xl"></i>Support Me</a
       >
-         <h1
-            class="text-secondary text-3xl md:text-[50px] font-thin self-start ml-6 md: py-10"
-         >
-            Today Overview
-         </h1>
-
-         <div
-            class="w-full flex flex-col gap-y-5 justify-center items-center sm:w-full sm:flex md:flex-row sm:justify-center sm:items-center sm:gap-x-5 md:justify-start"
-         >
-            <!-- Temperature card section start -->
-            <div
-               class="temprature w-[90%] flex justify-center text-secondary flex-col gap-y-2 bg-primary2 p-16 rounded-lg md:w-full lg:w-[30%]"
+      <div class="lg:hidden">
+        <button class="navbar-burger flex items-center p-3 text-secondary">
+          <svg
+            class="block h-6 w-6 fill-current"
+            viewBox="0 0 20 20"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <title>Mobile menu</title>
+            <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"></path>
+          </svg>
+        </button>
+      </div>
+    </nav>
+    <!-- navbar in mobile -->
+    <div class="navbar-menu relative z-50 hidden">
+      <div class="navbar-backdrop fixed inset-0 bg-gray-800 opacity-25"></div>
+      <nav
+        class="fixed bottom-0 left-0 top-0 flex w-5/6 max-w-sm flex-col overflow-y-auto bg-background px-6 py-6"
+      >
+        <div class="mb-8 flex items-center">
+          <a
+            class="mr-auto text-2xl font-semibold leading-none text-secondary"
+            href="#"
+          >
+            <i class="ri-sun-fill"></i> MeWeather
+          </a>
+          <button class="navbar-close">
+            <svg
+              class="h-6 w-6 cursor-pointer text-gray-400 hover:text-gray-500"
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
             >
-               <div class="self-end flex justify-between items-center w-full">
-                  <i class="ri-sun-foggy-fill text-[100px]"></i>
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M6 18L18 6M6 6l12 12"
+              ></path>
+            </svg>
+          </button>
+        </div>
+        <input
+          type="search"
+          placeholder="search county.."
+          class="h-[60px] rounded-xl bg-primary2 px-6 text-secondary"
+        />
 
-                  <div class="max-min-temp">
-                     <span class="flex items-center gap-x-2 py-3 text-2xl">
-                        <i class="ri-add-circle-fill"></i>28<i
-                           class="ri-celsius-line"
-                        ></i>
-                     </span>
-                     <span class="flex items-center gap-x-2 text-2xl">
-                        <i class="ri-indeterminate-circle-fill"></i>19<i
-                           class="ri-celsius-line"
-                        ></i>
-                     </span>
-                  </div>
-               </div>
-               <div class="temp text-[40px] font-medium">
-                  28<i class="ri-celsius-line"></i>
-               </div>
-               <div class="flex gap-x-2">
-                  <i class="ri-cloud-fill"></i>Clear sky
-               </div>
-               <hr class="my-5" />
-               <div class="flex gap-x-2">
-                  <i class="ri-map-2-fill"></i><span class="city"></span>
-               </div>
-               <div class="flex gap-x-2">
-                  <i class="ri-time-zone-line"></i>00:00:00
-               </div>
-            </div>
-            <!-- Temperature card section end -->
-            <div
-               class="w-full flex h-full md:h-[500px] flex-col items-center justify-center gap-5 sm:flex-col sm:w-1/2 md:flex-wrap"
+        <div class="mt-auto">
+          <div class="pt-6">
+            <a
+              class="mb-2 block rounded-xl bg-blue-600 px-4 py-3 text-center text-xs font-semibold leading-loose text-white hover:bg-blue-700"
+              href="#"
+              ><i class="ri-github-fill mr-2 text-2xl"></i>Support Me</a
             >
-               <!-- wind speed card start -->
-               <div
-                  class="w-[90%] px-10 h-[150px] md:h-[150px] flex justify-between items-center text-secondary bg-primary2 rounded-lg gap-x-5 sm:w-full md:w-[40%] md:self-start md:px-6"
-               >
-                  <div class="px-2">
-                     <i class="ri-cloud-windy-line text-[50px]"></i>
-                  </div>
-                  <div class="wind-speed-desc w-full">
-                     <p class="leading-relaxed">Wind Speed</p>
-                     <p class="text-[25px]">29 km/h</p>
-                  </div>
-               </div>
-               <!-- wind speed card end -->
+          </div>
+          <p class="my-4 text-center text-xs text-gray-400">
+            <span>Copyright © 2021</span>
+          </p>
+        </div>
+      </nav>
+    </div>
+    <!-- navbar content end -->
 
-               <!-- Humidity card start -->
-               <div
-                  class="w-[90%] px-10 h-[150px] md:h-[150px] flex justify-between items-center text-secondary bg-primary2 rounded-lg gap-x-5 sm:w-full md:w-[40%] md:self-start md:px-6"
-               >
-                  <div class="px-2">
-                     <i class="ri-water-percent-line text-[50px]"></i>
-                  </div>
-                  <div class="humidty-desc w-full">
-                     <p>Humidity</p>
-                     <p class="text-[25px]">29%</p>
-                  </div>
-               </div>
-               <!-- humidity card end -->
+    <main
+      class="container mx-auto mt-10 flex w-full flex-col items-center justify-center gap-y-5 sm:w-full"
+    >
+      <h1
+        class="md: ml-6 self-start py-10 text-3xl font-thin text-secondary md:text-[50px]"
+      >
+        Today Overview
+      </h1>
 
-               <!-- sunrise card start -->
-               <div
-                  class="sunrise-card w-[90%] px-10 h-[150px] md:h-[150px] flex justify-between items-center text-secondary bg-primary2 rounded-lg gap-x-5 sm:w-[49%] md:self-start md:px-6 md:w-[40%]"
-               >
-                  <div class="px-2">
-                     <i class="ri-sun-line text-[50px]"></i>
-                  </div>
-                  <div class="sunrise-desc w-full">
-                     <p>Sunrise</p>
-                     <p class="text-[25px]">10092</p>
-                  </div>
-               </div>
-               <!-- sunrise card end -->
+      <div
+        class="flex w-full flex-col items-center justify-center gap-y-5 sm:flex sm:w-full sm:items-center sm:justify-center sm:gap-x-5 md:flex-row md:justify-start"
+      >
+        <!-- Temperature card section start -->
+        <div
+          class="temprature flex w-[90%] flex-col justify-center gap-y-2 rounded-lg bg-primary2 p-16 text-secondary md:w-full lg:w-[30%]"
+        >
+          <div class="flex w-full items-center justify-between self-end">
+            <i class="ri-sun-foggy-fill text-[100px]"></i>
 
-               <!-- pressure start -->
-               <div
-                  class="pressure w-[90%] px-10 h-[150px] md:h-[150px] flex justify-between items-center text-secondary bg-primary2 rounded-lg gap-x-5 sm:w-[49%] md:self-start md:px-6 md:w-[40%]"
-               >
-                  <div class="px-2">
-                     <i class="ri-arrow-down-circle-line text-[50px]"></i>
-                  </div>
-                  <div class="pressure-desc w-full">
-                     <p>Pressure</p>
-                     <p class="text-[25px]">10092</p>
-                  </div>
-               </div>
-               <!-- pressure end -->
-
-               <!-- visibility start -->
-               <div
-                  class="visibility w-[90%] px-10 h-[150px] md:h-[150px] flex justify-between items-center text-secondary bg-primary2 rounded-lg gap-x-5 sm:w-[49%] md:self-start md:px-6 md:w-[40%]"
-               >
-                  <div class="px-2">
-                     <i class="ri-eye-line text-[50px]"></i>
-                  </div>
-                  <div class="visibilty-desc w-full">
-                     <p>Visibility</p>
-                     <p class="text-[25px]">10092</p>
-                  </div>
-               </div>
-               <!-- visibility end -->
-
-               <!-- sunset card start -->
-               <div
-                  class="sunset-card w-[90%] px-10 h-[150px] md:h-[150px] flex justify-between items-center text-secondary bg-primary2 rounded-lg gap-x-5 sm:w-[49%] md:self-start md:px-6 md:w-[40%]"
-               >
-                  <div class="px-2">
-                     <i class="ri-moon-line text-[50px]"></i>
-                  </div>
-                  <div class="sunset-desc w-full">
-                     <p>Sunset</p>
-                     <p class="text-[25px]">10092</p>
-                  </div>
-               </div>
-               <!-- sunset card end -->
-
-               <!-- sunset card start -->
-               <div
-                  class="sunset-card w-[90%] px-10 h-[150px] md:h-[150px] flex justify-between items-center text-secondary bg-primary2 rounded-lg gap-x-5 sm:w-[49%] md:self-start md:px-6 md:w-[40%]"
-               >
-                  <div class="px-2">
-                     <i class="ri-moon-line text-[50px]"></i>
-                  </div>
-                  <div class="sunset-desc w-full">
-                     <p>Sunset</p>
-                     <p class="text-[25px]">10092</p>
-                  </div>
-               </div>
-               <!-- sunset card end -->
-               <!-- sunset card start -->
-               <div
-                  class="sunset-card w-[90%] px-10 h-[150px] md:h-[150px] flex justify-between items-center text-secondary bg-primary2 rounded-lg gap-x-5 sm:w-[49%] md:self-start md:px-6 md:w-[40%]"
-               >
-                  <div class="px-2">
-                     <i class="ri-moon-line text-[50px]"></i>
-                  </div>
-                  <div class="sunset-desc w-full">
-                     <p>Sunset</p>
-                     <p class="text-[25px]">10092</p>
-                  </div>
-               </div>
-               <!-- sunset card end -->
-               <!-- sunset card start -->
-               <div
-                  class="sunset-card w-[90%] px-10 h-[150px] md:h-[150px] flex justify-between items-center text-secondary bg-primary2 rounded-lg gap-x-5 sm:w-[49%] md:self-start md:px-6 md:w-[40%]"
-               >
-                  <div class="px-2">
-                     <i class="ri-moon-line text-[50px]"></i>
-                  </div>
-                  <div class="sunset-desc w-full">
-                     <p>Sunset</p>
-                     <p class="text-[25px]">10092</p>
-                  </div>
-               </div>
-               <!-- sunset card end -->
+            <div class="max-min-temp">
+              <span class="flex items-center gap-x-2 py-3 text-2xl">
+                <i class="ri-add-circle-fill"></i><span class="max-temp"></span
+                ><i class="ri-celsius-line"></i>
+              </span>
+              <span class="flex items-center gap-x-2 text-2xl">
+                <i class="ri-indeterminate-circle-fill"></i
+                ><span class="min-temp"></span><i class="ri-celsius-line"></i>
+              </span>
             </div>
-         </div>
-      </main>
-      <script src="https://unpkg.com/feather-icons"></script>
-      <script src="../src/assets/js/index.js"></script>
-   </body>
+          </div>
+          <div class="text-[40px] font-medium">
+            <span class="temp"></span><i class="ri-celsius-line"></i>
+          </div>
+          <div class="flex gap-x-2">
+            <i class="ri-cloud-fill"></i><span class="weather-desc"></span>
+          </div>
+          <hr class="my-5" />
+          <div class="flex gap-x-2">
+            <i class="ri-map-2-fill"></i><span class="city"></span>
+          </div>
+          <div class="flex gap-x-2">
+            <i class="ri-time-zone-line"></i><span class="timezone">[timezone:]</span>
+          </div>
+        </div>
+        <!-- Temperature card section end -->
+        <div
+          class="flex h-full w-full flex-col items-center justify-center gap-5 sm:w-1/2 sm:flex-col md:h-[500px] md:flex-wrap"
+        >
+          <!-- wind speed card start -->
+          <div
+            class="flex h-[150px] w-[90%] items-center justify-between gap-x-5 rounded-lg bg-primary2 px-10 text-secondary sm:w-full md:h-[150px] md:w-[40%] md:self-start md:px-6"
+          >
+            <div class="px-2">
+              <i class="ri-cloud-windy-line text-[50px]"></i>
+            </div>
+            <div class="w-full">
+              <p class="leading-relaxed">Wind Speed</p>
+              <p class="wind-speed inline text-[25px]">29 km/h</p>
+            </div>
+          </div>
+          <!-- wind speed card end -->
+
+          <!-- Humidity card start -->
+          <div
+            class="flex h-[150px] w-[90%] items-center justify-between gap-x-5 rounded-lg bg-primary2 px-10 text-secondary sm:w-full md:h-[150px] md:w-[40%] md:self-start md:px-6"
+          >
+            <div class="px-2">
+              <i class="ri-water-percent-line text-[50px]"></i>
+            </div>
+            <div class="w-full">
+              <p>Humidity</p>
+              <p class="humidity inline text-[25px]">[humidity:number]</p>
+              <i class="ri-percent-line text-2xl"></i>
+            </div>
+          </div>
+          <!-- humidity card end -->
+
+          <!-- sunrise card start -->
+          <div
+            class="flex h-[150px] w-[90%] items-center justify-between gap-x-5 rounded-lg bg-primary2 px-10 text-secondary sm:w-[49%] md:h-[150px] md:w-[40%] md:self-start md:px-6"
+          >
+            <div class="px-2">
+              <i class="ri-sun-line text-[50px]"></i>
+            </div>
+            <div class="w-full">
+              <p>Sunrise</p>
+              <p class="sunrise text-[25px]">[sunrise:number]</p>
+            </div>
+          </div>
+          <!-- sunrise card end -->
+
+          <!-- pressure start -->
+          <div
+            class="flex h-[150px] w-[90%] items-center justify-between gap-x-5 rounded-lg bg-primary2 px-10 text-secondary sm:w-[49%] md:h-[150px] md:w-[40%] md:self-start md:px-6"
+          >
+            <div class="px-2">
+              <i class="ri-arrow-down-circle-line text-[50px]"></i>
+            </div>
+            <div class="w-full">
+              <p>Pressure</p>
+              <p class="pressure text-[25px]">[pressure:number]</p>
+            </div>
+          </div>
+          <!-- pressure end -->
+
+          <!-- visibility start -->
+          <div
+            class="flex h-[150px] w-[90%] items-center justify-between gap-x-5 rounded-lg bg-primary2 px-10 text-secondary sm:w-[49%] md:h-[150px] md:w-[40%] md:self-start md:px-6"
+          >
+            <div class="px-2">
+              <i class="ri-eye-line text-[50px]"></i>
+            </div>
+            <div class="w-full">
+              <p>Visibility</p>
+              <p class="visibility text-[25px]">[visibility:number]</p>
+            </div>
+          </div>
+          <!-- visibility end -->
+
+          <!-- sunset card start -->
+          <div
+            class="flex h-[150px] w-[90%] items-center justify-between gap-x-5 rounded-lg bg-primary2 px-10 text-secondary sm:w-[49%] md:h-[150px] md:w-[40%] md:self-start md:px-6"
+          >
+            <div class="px-2">
+              <i class="ri-moon-line text-[50px]"></i>
+            </div>
+            <div class="w-full">
+              <p>Sunset</p>
+              <p class="sunset text-[25px]">[sunset:number]</p>
+            </div>
+          </div>
+          <!-- sunset card end -->
+
+          <!-- base card start -->
+          <div
+            class="flex h-[150px] w-[90%] items-center justify-between gap-x-5 rounded-lg bg-primary2 px-10 text-secondary sm:w-[49%] md:h-[150px] md:w-[40%] md:self-start md:px-6"
+          >
+            <div class="px-2">
+              <i class="ri-base-station-fill text-[50px]"></i>
+            </div>
+            <div class="w-full">
+              <p>Base From</p>
+              <p class="text-[25px] base">[base:string]</p>
+            </div>
+          </div>
+          <!-- base card end -->
+
+          <!-- sea-level card start -->
+          <div
+            class="flex h-[150px] w-[90%] items-center justify-between gap-x-5 rounded-lg bg-primary2 px-10 text-secondary sm:w-[49%] md:h-[150px] md:w-[40%] md:self-start md:px-6"
+          >
+            <div class="px-2">
+              <i class="ri-bar-chart-horizontal-fill text-[50px]"></i>
+            </div>
+            <div class="w-full">
+              <p>Sea Level</p>
+              <p class="text-[25px] sea-level">[sea-level number]</p>
+            </div>
+          </div>
+          <!-- sea-level card end -->
+
+          <!-- ground-level card start -->
+          <div
+            class="flex h-[150px] w-[90%] items-center justify-between gap-x-5 rounded-lg bg-primary2 px-10 text-secondary sm:w-[49%] md:h-[150px] md:w-[40%] md:self-start md:px-6"
+          >
+            <div class="px-2">
+              <i class="ri-bar-chart-fill text-[50px]"></i>
+            </div>
+            <div class="w-full">
+              <p>Ground Level</p>
+              <p class="ground-level text-[25px]">10092</p>
+            </div>
+          </div>
+          <!-- ground-level card end -->
+        </div>
+      </div>
+    </main>
+    <script src="https://unpkg.com/feather-icons"></script>
+    <script src="../src/assets/js/index.js"></script>
+    <script src="../src/assets/js/navbar.js"></script>
+  </body>
 </html>

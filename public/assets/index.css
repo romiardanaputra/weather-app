@@ -653,6 +653,10 @@ video {
   display: block;
 }
 
+.inline {
+  display: inline;
+}
+
 .flex {
   display: flex;
 }
@@ -818,10 +822,6 @@ video {
   padding: 0.75rem;
 }
 
-.p-1 {
-  padding: 0.25rem;
-}
-
 .px-10 {
   padding-left: 2.5rem;
   padding-right: 2.5rem;
@@ -955,6 +955,30 @@ video {
 
 .opacity-25 {
   opacity: 0.25;
+}
+
+.\[base\:string\] {
+  base: string;
+}
+
+.\[sunset\:number\] {
+  sunset: number;
+}
+
+.\[visibility\:number\] {
+  visibility: number;
+}
+
+.\[pressure\:number\] {
+  pressure: number;
+}
+
+.\[sunrise\:number\] {
+  sunrise: number;
+}
+
+.\[humidity\:number\] {
+  humidity: number;
 }
 
 /* custom styles */
